@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0A0908">
+    <title>Skanda Nagaraja — Portfolio</title>
+    <meta name="description" content="Portfolio of Skanda Nagaraja — projects, experience, and resume.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230A0908'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='system-ui,Segoe UI,Roboto' font-size='28' fill='%23C6AC8F'%3ESN%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div id="root"></div>
+
+    <noscript>
+      <div class="no-js">This site works best with JavaScript enabled.</div>
+    </noscript>
+
+    <!-- React 18 via CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- Babel for in-browser JSX transform -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- App -->
+    <script type="text/babel">
+      /* Fallback to ensure theme colors are available even before CSS loads */
+      document.documentElement.style.setProperty('--clr-bg', '#0A0908');
+      document.documentElement.style.setProperty('--clr-surface', '#22333B');
+      document.documentElement.style.setProperty('--clr-text', '#EAE0D5');
+      document.documentElement.style.setProperty('--clr-accent', '#C6AC8F');
+      document.documentElement.style.setProperty('--clr-muted', '#5E503F');
+    </script>
+    <script type="text/babel" data-presets="env,react" src="./src/app.jsx"></script>
+  </body>
+  </html>
+
+

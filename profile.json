@@ -1,0 +1,82 @@
+{
+  "name": "Skanda Nagaraja",
+  "roles": ["Software Engineer", "Full-Stack Developer", "Data Scientist", "Machine Learning Engineer"],
+  "summary": "High-velocity CS senior leveraging stats + AI to build impactful software and drive innovation in real-world engineering teams.",
+  "location": "Austin, TX",
+  "email": "mailto:skannagaraja@gmail.com",
+  "socials": [
+    { "label": "GitHub", "href": "https://github.com/Skanda-Nagaraja" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/skanda-nagaraja-84b9471a6/" }
+  ],
+  "experience": [
+    {
+      "company": "Nike",
+      "role": "Machine Learning Engineer Intern",
+      "period": "Summer 2025 — Beaverton, OR",
+      "bullets": [
+        "Built backend microservices on AWS SageMaker and Databricks to serve model-optimization endpoints for real-time product analytics.",
+        "Prototyped text-to-image flows and refined prompt engineering + RAG pipelines to power an AI design tool for designers in Slack."
+      ],
+      "tech": ["AWS SageMaker", "Databricks", "Python", "RAG", "GenAI", "Slack"]
+    },
+    {
+      "company": "Fluke (Fortive)",
+      "role": "Software Engineering & Architecture Intern",
+      "period": "Summer 2024 — Everett, WA",
+      "bullets": [
+        "Led refactors and migrations across 5+ cross-functional projects to modernize enterprise architecture and improve long-term scalability.",
+        "Orchestrated Oracle report parsing with PySpark and Azure DevOps, accelerating CRM data updates by 30%."
+      ],
+      "tech": ["PySpark", "Azure DevOps", "Oracle", "Python", "Architecture"]
+    },
+    {
+      "company": "Sanofi",
+      "role": "Data Science & Deep Learning Intern",
+      "period": "Summer 2023 — Bridgewater, NJ",
+      "bullets": [
+        "Automated ingestion from 3 disparate sources into Snowflake, enabling real-time market insights for a 20-member cross-functional team.",
+        "Built an ML pipeline to analyze sales and identified profitability drivers, informing fixes for major budget overruns."
+      ],
+      "tech": ["Python", "Snowflake", "ETL", "ML"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "SHIELDS — L3 Harris Capstone",
+      "description": "Agentic remediation framework that autonomously triages and patches system vulns; improved closure rates by 65%. LLM-driven design with Nessus and OpenSCAP via Pydantic + FastAPI; featured in a peer-reviewed AI paper.",
+      "tech": ["Python", "FastAPI", "Pydantic", "Nessus", "OpenSCAP", "OpenRouter", "RAG"],
+      "links": [{ "label": "Overview", "href": "#" }]
+    },
+    {
+      "name": "Panda Express POS System",
+      "description": "Next.js kiosk + manager dashboard processing ~15 orders/hr (+20% volume). Full-stack PostgreSQL APIs for orders, staffing, and sales reporting; led sprints for a 5-person team.",
+      "tech": ["Next.js", "React", "shadcn/ui", "PostgreSQL"],
+      "links": [{ "label": "Demo", "href": "#" }]
+    },
+    {
+      "name": "Quant Wise",
+      "description": "Flask backtester on Yahoo Finance enabling 10+ years of simulations; 30+ TA-Lib indicators in React dashboard; automated daily signals with Python + CRON.",
+      "tech": ["Next.js", "Flask", "TradingView", "TA-Lib", "Python", "CRON"],
+      "links": [{ "label": "Demo", "href": "#" }]
+    },
+    {
+      "name": "MoneyMind",
+      "description": "Gamified financial education with generative AI. Next.js frontend, OpenAI-personalized quizzes and suggestions; MongoDB persistence.",
+      "tech": ["Next.js", "MongoDB", "React", "OpenAI"],
+      "links": [{ "label": "Overview", "href": "#" }]
+    }
+  ],
+  "skills": {
+    "Languages": ["TypeScript", "JavaScript", "Python", "Java", "C/C++", "SQL", "x86 Assembly"],
+    "Frameworks & Libraries": ["React", "Next.js", "Flask", "PyTorch", "HuggingFace", "TA-Lib"],
+    "Databases": ["MongoDB", "MySQL", "PostgreSQL", "Snowflake"],
+    "Tools": ["Docker", "Azure DevOps", "Power Automate", "Git", "Agile/Scrum", "Databricks", "Wireshark"],
+    "Other": ["REST APIs", "Power BI", "TradingView", "AWS", "Project Management", "Security Penetration Testing", "OWASP Top 10"]
+  },
+  "awards": [
+    { "name": "Meloy Entrepreneurial Fellow", "desc": "MEIEP recognition for high‑potential Aggie leaders; speaker series + industry mentorship." },
+    { "name": "Dean's Honor Roll", "desc": "Awarded for cumulative GPA of 3.7+." }
+  ],
+  "interests": ["Formula 1", "Cooking", "Music", "Mountain biking"]
+}
+

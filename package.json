@@ -1,0 +1,14 @@
+{
+  "name": "skanda-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React-powered static portfolio site for Skanda Nagaraja",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "license": "MIT"
+}
+
