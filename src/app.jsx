@@ -252,7 +252,7 @@ function Hero({ name, roles, summary }) {
       </h1>
       <p className="subheadline" aria-live="polite">{roles[roleIdx]}</p>
       <div className="cta-row">
-        <a className="btn primary" href={PDF_PATH} target="_blank" rel="noopener">View Resume</a>
+        <a className="btn primary" href={PDF_PATH} download>Download Resume</a>
         <a className="btn ghost" href="#projects">Explore Projects</a>
       </div>
     </section>
@@ -271,8 +271,8 @@ function About({ profile }) {
           <p><strong>Interests:</strong> {profile.interests?.join(' • ')}</p>
         </div>
         <div className="about-card">
-          <p><strong>Currently:</strong> Open to impactful opportunities and collaborations.</p>
-          <p><strong>Focus:</strong> Frontend architecture, performance, design systems.</p>
+          <p><strong>Currently:</strong> Open to impactful new graduate opportunities.</p>
+          <p><strong>Focus:</strong> Software development, data science, and machine learning.</p>
         </div>
       </div>
     </section>
@@ -376,13 +376,11 @@ function Resume() {
   return (
     <section id="resume" className="section container">
       <h2 className="section-title">Resume</h2>
-      <div className="resume-embed reveal">
-        <object data={PDF_PATH} type="application/pdf" aria-label="Embedded resume PDF">
-          <p>Your browser can't display PDFs. Download instead:
-            {' '}
-            <a className="link" href={PDF_PATH} target="_blank" rel="noopener">Open Resume PDF</a>
-          </p>
-        </object>
+      <div className="resume-embed reveal" style={{ display: 'grid', gap: 10 }}>
+        <p style={{ margin: 0, opacity: .9 }}>Prefer a copy? Download the PDF below.</p>
+        <div className="cta-row">
+          <a className="btn primary" href={PDF_PATH} download>Download Resume (PDF)</a>
+        </div>
       </div>
     </section>
   );
