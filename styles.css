@@ -142,6 +142,16 @@ body {
 .hero {
   padding: 96px 0 48px;
 }
+.hero-wrap {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  align-items: center;
+  gap: 20px;
+}
+.hero-copy {
+  display: grid;
+  gap: 8px;
+}
 .headline {
   margin: 0 0 8px 0;
   font-size: clamp(28px, 5vw, 48px);
@@ -167,6 +177,43 @@ body {
 @keyframes caretBlink {
   0%, 49% { border-color: rgba(198,172,143,.9); }
   50%, 100% { border-color: transparent; }
+}
+
+/* Portrait */
+.portrait-card {
+  justify-self: end;
+}
+.portrait-frame {
+  position: relative;
+  padding: 6px;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(198,172,143,.3), rgba(198,172,143,.08));
+  border: 1px solid rgba(198,172,143,.25);
+  box-shadow: var(--shadow-2);
+  max-width: 280px;
+}
+.portrait-frame::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 240px at 90% -10%, rgba(198,172,143,.22), transparent 60%),
+    radial-gradient(400px 220px at 10% 110%, rgba(94,80,63,.22), transparent 60%);
+  z-index: -1;
+}
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(198,172,143,.25);
+  box-shadow: var(--shadow-1);
+  background: #0b0a09;
 }
 .headline .greeting {
   display: block;

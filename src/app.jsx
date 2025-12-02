@@ -20,6 +20,7 @@ const defaultProfile = {
     { label: 'GitHub', href: 'https://github.com/Skanda-Nagaraja' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/skanda-nagaraja-84b9471a6/' },
   ],
+  avatar: 'pic1.jpeg',
   experience: [
     {
       company: 'Nike',
@@ -222,7 +223,6 @@ function Navbar({ name, email, socials }) {
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#awards">Awards</a></li>
-            <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -231,7 +231,7 @@ function Navbar({ name, email, socials }) {
   );
 }
 
-function Hero({ name, roles, summary }) {
+function Hero({ name, roles, summary, avatar }) {
   const [roleIdx, setRoleIdx] = React.useState(0);
   React.useEffect(() => {
     const id = setInterval(() => setRoleIdx((i) => (i + 1) % roles.length), 2600);
@@ -243,17 +243,26 @@ function Hero({ name, roles, summary }) {
   const nameTyped = useTypewriter(name, 38, nameDelay);
   return (
     <section className="hero container" id="home">
-      <h1 className="headline type-line" aria-live="polite">
-        <span className="greeting">{greetingTyped}</span>
-        <span className="name">
-          {nameTyped}
-          <span className="caret" aria-hidden="true"></span>
-        </span>
-      </h1>
-      <p className="subheadline" aria-live="polite">{roles[roleIdx]}</p>
-      <div className="cta-row">
-        <a className="btn primary" href={PDF_PATH} download>Download Resume</a>
-        <a className="btn ghost" href="#projects">Explore Projects</a>
+      <div className="hero-wrap">
+        <div className="hero-copy">
+          <h1 className="headline type-line" aria-live="polite">
+            <span className="greeting">{greetingTyped}</span>
+            <span className="name">
+              {nameTyped}
+              <span className="caret" aria-hidden="true"></span>
+            </span>
+          </h1>
+          <p className="subheadline" aria-live="polite">{roles[roleIdx]}</p>
+          <div className="cta-row">
+            <a className="btn primary" href={PDF_PATH} download>Download Resume</a>
+            <a className="btn ghost" href="#projects">Explore Projects</a>
+          </div>
+        </div>
+        <div className="portrait-card reveal" aria-hidden={!avatar}>
+          <div className="portrait-frame">
+            <img className="portrait" src={avatar || 'avatar.jpg'} alt={`${name} portrait`} />
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -377,7 +386,6 @@ function Resume() {
     <section id="resume" className="section container">
       <h2 className="section-title">Resume</h2>
       <div className="resume-embed reveal" style={{ display: 'grid', gap: 10 }}>
-        <p style={{ margin: 0, opacity: .9 }}>Prefer a copy? Download the PDF below.</p>
         <div className="cta-row">
           <a className="btn primary" href={PDF_PATH} download>Download Resume (PDF)</a>
         </div>
@@ -449,13 +457,12 @@ function App() {
       <BackgroundCanvas />
       <Navbar name={profile.name} email={profile.email} socials={profile.socials} />
       <main className="site-main">
-        <Hero name={profile.name} roles={profile.roles} summary={profile.summary} />
+        <Hero name={profile.name} roles={profile.roles} summary={profile.summary} avatar={profile.avatar} />
         <About profile={profile} />
         <Experience experience={profile.experience} />
         <Projects projects={profile.projects} />
         <Skills skills={profile.skills} />
         <Awards awards={profile.awards} />
-        <Resume />
         <Contact email={profile.email} socials={profile.socials} />
       </main>
       <Footer name={profile.name} />
